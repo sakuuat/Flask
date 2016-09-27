@@ -1,8 +1,9 @@
 # coding:utf-8
-#app.py
+import cv2
+import numpy
 from flask import Flask, render_template, request
-from kiritori import cut_img 
-import cv,numpy
+from cut_parts import cut_img 
+import glob
 
 app = Flask(__name__)
 
@@ -12,9 +13,12 @@ def index():
 
 @app.route('/uploader', methods=['POST'])
 def upload_file():
-    if request.method == 'POST':
-        f = request.files['the_file']
-        kiritori.cut_img(f)
+   # if request.method == 'POST':
+    f = request.files['the_file']
+    cut_img(f)
+
+    
+    return 'pass'
 
         
 
