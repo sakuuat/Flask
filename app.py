@@ -5,6 +5,7 @@ from glob import glob
 import os
 from flask import Flask, render_template, request
 from cut_parts import cut_img
+from color import personal_color
 from os.path import join, relpath
 
 app = Flask(__name__)
@@ -35,6 +36,8 @@ def select_parts():
         eye = int(request.form['number1'])
         nose = int(request.form['number2'])
         mouth = int(request.form['number3'])
+
+        personal_color(eye, nose, mouth)
 
     return render_template('index.html', message='Select the face image')
 
