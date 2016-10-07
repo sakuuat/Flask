@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<h1>{{title}}</h1>
+
+    <form method="post" action="/uploader/select">
+    <p>目：<input type="number" name="number1"></p>
+    <p>鼻：<input type="number" name="number2"></p>
+    <p>口：<input type="number" name="number3"></p>
+    <p><input type="submit" value='送信する'></p>
+    </form>
+
+    {% for item in parts %}
+        <a class="thumbnail"><img src={{item.image_name}} width="150" height="150" float=left></a>
+        <figcaption>{{loop.index}}</figcaption>
+    {% endfor %}
+
+{% endblock %}
