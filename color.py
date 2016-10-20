@@ -80,13 +80,13 @@ def personal_color(eye,nose,mouth):
     re_season = max(list)
 
     if re_season == spring:
-        print'春が来た'
+        return 1 
     elif re_season == summer:
-        print'夏が来た'
+        return 2
     elif re_season == autumn:
-        print'秋が来た'
+        return 3
     elif re_season == winter:
-        print'冬が来た'
+        return 4
 
 
     [os.remove(f) for f in glob.glob(current_dir+'static/image/'+'*.jpg')]
