@@ -3,6 +3,13 @@
 
 <h1>{{title}}</h1>
 
+<style type="text/css">
+parts {
+    float; left;
+    padding-right: 20px:
+}
+</style>
+
     <form method="post" action="/uploader/select">
     <p>目：<input type="number" name="number1"></p>
     <p>鼻：<input type="number" name="number2"></p>
@@ -11,8 +18,10 @@
     </form>
 
     {% for item in parts %}
-        <a class="thumbnail"><img src={{item.image_name}} width="150" height="150" float=left></a>
-        <figcaption>{{loop.index}}</figcaption>
+        <figure class="parts">
+            <img src={{item.image_name}} width="150" height="150">
+            <figcaption>{{loop.index}}</figcaption>
+        </figure>
     {% endfor %}
 
 {% endblock %}

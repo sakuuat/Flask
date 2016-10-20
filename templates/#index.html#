@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<h1>{{title}}</h1>
+<p>{{ message }}</p>
+<li>
+
+<form method="post" action="/uploader" enctype="multipart/form-data">
+<p><input type="file" name="the_file"></p>
+<p><input type="submit" value="送信する"></p>
+
+
+{% endblock %}
+

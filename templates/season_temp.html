@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>診断結果</title>
+    </head>
+
+    <body>
+        <h1>診断結果</h1>
+        <p>あなたのベースカラーは{{base_color}}です</p>
+
+        <p>あなたのタイプは{{season}}です</p>
+
+        <p>あなたに似合う色はこちら</p>
+
+
+        {% block body %}{% endblock%}
+
+        <form method="post" action="/uploader/select/parsonalcolor" >
+            <p><input type="submit" value='TOPに戻る'></p>
+        </form>
+    
+    </body>
+</html>
+
